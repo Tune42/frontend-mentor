@@ -1,5 +1,5 @@
-/* Roboto Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Kumbh Sans Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 /* Box sizing rules */
 *,
@@ -31,6 +31,23 @@ ol[role='list'] {
 /* Set core root defaults */
 html:focus-within {
     scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    /* personal starting point */
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: hsl(185, 75%, 39%);
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -69,33 +86,30 @@ select {
   }
 }
 
-/* Set core body defaults */
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    /* personal starting point */
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.attribution {
+  position: absolute;
+  bottom: 10px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+.background-top, .background-bottom {
+  position: absolute;
+  z-index: -1;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.background-top {
+  transform: translate(-50%, -42.5%);
 }
 
-.container {
-    max-width: 1200px;
+.background-bottom {
+  transform: translate(50%, 50%);
+}
+
+@media(max-width: 575px) {
+  .background-top {
+    transform: translate(-50%, -75%);
+  }
+
+  .background-bottom {
+    transform: translate(50%, 75%);
+  }
 }

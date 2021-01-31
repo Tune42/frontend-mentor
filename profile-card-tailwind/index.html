@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Profile card component</title>
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+  </head>
+  <body>
+    <img src="./images/bg-pattern-top.svg" class="background-top">
+    <div class='z-10  min-w-max flex flex-col items-center bg-white rounded-xl'>
+      <img class='rounded-t-xl' src="./images/bg-pattern-card.svg">
+      <img class='rounded-full relative bottom-12 border-solid border-white border-4' src="./images/image-victor.jpg" alt="Profile Picture">
+      <div class='relative bottom-7 text-center'>
+        <span class='font-bold'>Victor Crest</span> <span class='text-gray-500 text-lg'>26</span>
+        <br>
+        <span class='text-gray-500 text-sm'>London</span>
+      </div>
+      <div class='w-full h-px bg-gray-200 relative bottom-2'></div>
+      <ul class='flex justify-around w-4/5 p-4'>
+        <li class='flex flex-col text-center'>
+          <span class='font-bold'>80K</span>
+          <span class='text-gray-500 text-xs tracking-wider'>Followers</span>
+        </li>
+        <li class='flex flex-col text-center'>
+          <span class='font-bold'>803K</span>
+          <span class='text-gray-500 text-xs tracking-wider'>Likes</span>
+        </li>
+        <li class='flex flex-col text-center'>
+          <span class='font-bold'>1.4K</span>
+          <span class='text-gray-500 text-xs tracking-wider'>Photos</span>
+        </li>
+      </ul>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://tune42.netlify.app/">Michael Book</a>.
+    </div>
+    <img src="./images/bg-pattern-bottom.svg" class="background-bottom">
+  </body>
+</html>
