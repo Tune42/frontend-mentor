@@ -1,0 +1,246 @@
+/* Roboto Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --text-dark-desat-blue: hsl(238, 29%, 16%);
+  --text-soft-red: hsl(14, 88%, 65%);
+  --bg-violet: hsl(273, 75%, 66%);
+  --bg-blue: hsl(240, 73%, 65%);
+  --text-very-dark-gray-blue: hsl(237, 12%, 33%);
+  --text-dark-gray-blue: hsl(240, 6%, 50%);
+  --divider-gray-blue: hsl(240, 5%, 91%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    /* personal starting point */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(var(--bg-violet), var(--bg-blue));
+    /*disable text selection */
+    -ms-user-select:none;
+   -moz-user-select:none;
+   -webkit-user-select:none;
+   -webkit-touch-callout: none;
+   -khtml-user-select: none;
+    user-select:none;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 10px;
+}
+
+.faq-card {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
+  background: url(./images/bg-pattern-desktop.svg), white;
+  background-position: left -600px top -300px;
+  background-repeat: no-repeat;
+}
+
+.accordian {
+  width: 50%;
+  padding: 30px;
+}
+
+.accordian ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accordian ul li {
+  min-height: 40px;
+  border-bottom: 1px solid var(--divider-gray-blue);
+  margin-bottom: 10px;
+  color: var(--text-very-dark-gray-blue);
+  font-size: 14px;
+  width: 85%;
+}
+
+.title {
+  font-size: xx-large;
+  margin-bottom: 40px;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq.active .question {
+  font-weight: bold;
+}
+
+.answer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: smaller;
+  display: none;
+  color: grey;
+}
+
+.faq.active .answer {
+  display: block;
+}
+
+.faq.active .question .arrow {
+  transform: rotate(180deg);
+}
+
+.card-image {
+  min-width: 50%;
+  min-height: 100%;
+  background: url(./images/illustration-woman-online-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 75px;
+  right: 75px;
+}
+
+.overflow-wrapper {
+  position: relative;
+}
+
+.at-block {
+  position: absolute;
+  top: 200px;
+  left: -100px;
+  z-index: 5;
+}
+
+@media(max-width: 900px) {
+  .faq-card {
+    width: 350px;
+    flex-direction: column;
+    height: 550px;
+    background: url(./images/bg-pattern-mobile.svg), white;
+    background-repeat: no-repeat;
+    background-position: left 55px top 0px;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  .accordian {
+    width: 100%;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    top: -100px;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .accordian ul li {
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .card-image {
+    min-width: 260px;
+    min-height: 250px;
+    background: url(./images/illustration-woman-online-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -105px;
+    right: 15px;
+  }
+
+  .answer {
+    width: 85%;
+  }
+
+  .at-block {
+    display: none;
+  }
+}
