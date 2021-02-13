@@ -1,4 +1,5 @@
-const elements = document.querySelectorAll('.faq');
+var elements = document.querySelectorAll('.faq');
+//submission failing using const
 
 elements.forEach(element => {
     element.addEventListener('click', (e) => {
